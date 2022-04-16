@@ -22,22 +22,22 @@ API - Generate Token <br>
 <b>API - Budget Homes</b> <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/budgetHomes<br>
     METHOD : POST<br>
-    HEADERS : {Authorization: Bearer <token>}<br>
+    HEADERS : {Authorization: Bearer `token`}<br>
     BODY : {minPrice: <price>, maxPrice:<price>, pageNumber:<number>}<br>
 
 <b>API - Sqft Homes</b>    <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/sqftHomes<br>
     METHOD : POST<br>
-    HEADERS : {Authorization: Bearer <token>}<br>
+    HEADERS : {Authorization: Bearer `token`}<br>
     BODY : {minSqft: <sqft_living> pageNumber:<number>}<br>
     
 <b>API - Age Homes</b>     <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/ageHomes<br>
     METHOD : POST<br>
-    HEADERS : {Authorization: Bearer <token>}<br>
+    HEADERS : {Authorization: Bearer `token`}<br>
     BODY : {year: <year>, pageNumber:<number>}<br>
 <br>
 <b>API - Standard Price Predictor</b>      <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/standardPrices<br>
     METHOD : POST<br>
-    HEADERS : {Authorization: Bearer <token>}<br>
+    HEADERS : {Authorization: Bearer `token`}<br>
