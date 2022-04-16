@@ -70,4 +70,25 @@ module.exports = class queryService{
             return [];
         }
     }
+
+    async standardPrices()
+    {
+        try 
+        {
+            var {pageNumber} = this.req?.body;
+
+            pageNumber = pageNumber ? pageNumber : 1;
+
+            var skip = (pageNumber - 1) * LIMIT;
+
+            var query = 'SELECT * FROM `home-lane-db` LIMIT ? OFFSET ?';
+
+            return await executeStmt(query, [LIMIT, skip]);
+
+        } 
+        catch (error)
+        {
+            return [];
+        }
+    }
 }

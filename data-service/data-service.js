@@ -10,7 +10,7 @@ var sqftHomeSchema = require('../schema/sqft-home.json');
 var Validator = require('jsonschema').Validator;
 var validator = new Validator();
 
-dataService.get('/budgetHomes', async (req, res) => {
+dataService.post('/budgetHomes', async (req, res) => {
 
     try {
 
@@ -32,7 +32,7 @@ dataService.get('/budgetHomes', async (req, res) => {
     
 });
 
-dataService.get('/sqftHomes', async (req, res) => { 
+dataService.post('/sqftHomes', async (req, res) => { 
     try {
         
         /* Validate the request body */
@@ -53,7 +53,7 @@ dataService.get('/sqftHomes', async (req, res) => {
     }
 });
 
-dataService.get('/ageHomes', async (req, res) => {
+dataService.post('/ageHomes', async (req, res) => {
     try {
         
         /* Validate the request body */
@@ -74,6 +74,29 @@ dataService.get('/ageHomes', async (req, res) => {
 });
 
 
+dataService.get('/standardPrices', async (req, res) => {
+    try {
+        
+        var service = new queryService(req, res);
+        
+        /* Request to query database */
+        let result = await service.standardPrices();
+
+        for(let item of result)
+        {
+            var newPrice = (((item.bedrooms * item.bathrooms * (item.sqft_living/item.sqft_lot)*item.floors) + item.waterfront + item.view) * item.condition *(item.sqft_above + item.sqft_basement)-10 * (2022 - Math.max(item.yr_built, item.yr_renovated)))*100;
+
+            item.price = newPrice;
+        }
+
+        res.status(200).send({ message: "Data Fetched Successfully.", data:result });
+
+    } catch (error) {
+        res.status(401).send({message:error?.message});
+        
+        return;
+    }
+});
 
 
 
