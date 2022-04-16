@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "sqftHome",
+    "type": "object",
+    "properties":
+    {
+        "minSqft":{"type":"number"},
+        "pageNumber":{"type":"number"}
+    },
+    "required": ["minSqft"]
+  }

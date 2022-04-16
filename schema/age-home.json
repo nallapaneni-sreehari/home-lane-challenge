@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "ageHome",
+    "type": "object",
+    "properties":
+    {
+        "year":{"type":"number"},
+        "pageNumber":{"type":"number"}
+    },
+    "required": ["year"]
+  }
