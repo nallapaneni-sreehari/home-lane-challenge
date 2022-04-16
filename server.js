@@ -3,7 +3,8 @@ const app = express();
 const {authorize, generateToken} = require('./middlewares/auth');
 const dataService = require('./data-service/data-service');
 const bodyParser = require('body-parser');
-const PORT = env.process.PORT || 3000;
+
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
