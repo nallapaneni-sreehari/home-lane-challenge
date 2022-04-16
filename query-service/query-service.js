@@ -14,6 +14,7 @@ module.exports = class queryService{
         {
             var {minPrice, maxPrice, pageNumber} = this.req?.body;
 
+            /* Using the pagination to decrease the burden on server*/
             pageNumber = pageNumber ? pageNumber : 1;
 
             var skip = (pageNumber - 1) * LIMIT;
@@ -35,6 +36,7 @@ module.exports = class queryService{
         {
             var {minSqft, pageNumber} = this.req?.body;
 
+            /* Using the pagination to decrease the burden on server*/
             pageNumber = pageNumber ? pageNumber : 1;
 
             var skip = (pageNumber - 1) * LIMIT;
@@ -56,6 +58,7 @@ module.exports = class queryService{
         {
             var {year, pageNumber} = this.req?.body;
 
+            /* Using the pagination to decrease the burden on server*/
             pageNumber = pageNumber ? pageNumber : 1;
 
             var skip = (pageNumber - 1) * LIMIT;
@@ -77,6 +80,7 @@ module.exports = class queryService{
         {
             var {pageNumber} = this.req?.body;
 
+            /* Using the pagination to decrease the burden on server*/
             pageNumber = pageNumber ? pageNumber : 1;
 
             var skip = (pageNumber - 1) * LIMIT;
