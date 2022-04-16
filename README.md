@@ -1,4 +1,4 @@
-<h1>API LIVE DEPLOYED URL : https://home-lane-challenge.herokuapp.com/</h1>
+<h5>API LIVE DEPLOYED URL : https://home-lane-challenge.herokuapp.com/</h5>
 
 STEPS TO SET UP THIS PROJECT IN LOCAL :
 
