@@ -32,6 +32,7 @@ API - Generate Token <br>
                             "pageNumber":1
                          }
 
+<br>
 <b>API - Sqft Homes</b>    <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/sqftHomes  <br>
     METHOD : POST<br>
@@ -43,7 +44,8 @@ API - Generate Token <br>
                             "minSqft":2000,
                             "pageNumber":1
                          }
-                   
+     
+<br>
 <b>API - Age Homes</b>     <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/ageHomes   <br>
     METHOD : POST<br>
@@ -56,6 +58,7 @@ API - Generate Token <br>
                             "pageNumber":1
                         }
 
+<br>
 <b>API - Standard Price Predictor</b>      <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/standardPrices     <br>
     METHOD : POST<br>
