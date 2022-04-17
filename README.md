@@ -13,11 +13,11 @@
 First You'll need the token to Access APIs.
 So,     <br>
 
-API - Generate Token <br>
+<b>API - Generate Token</b>      <br>
     URL : https://home-lane-challenge.herokuapp.com/generate-token      <br>
-    METHOD : GET <br>
-
-<strong>*Note : copy the Token, You'll need it later.</strong>       <br>
+    METHOD : GET
+    
+<strong>*Note : copy the Token after it's generated, You'll need it later.</strong>       <br>
 
 <b>API - Budget Homes</b> <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/budgetHomes    <br>
