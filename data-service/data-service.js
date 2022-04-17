@@ -84,7 +84,7 @@ dataService.get('/standardPrices', async (req, res) => {
 
         for(let item of result)
         {
-            var newPrice = (((item.bedrooms * item.bathrooms * (item.sqft_living/item.sqft_lot)*item.floors) + item.waterfront + item.view) * item.condition *(item.sqft_above + item.sqft_basement)-10 * (2022 - Math.max(item.yr_built, item.yr_renovated)))*100;
+            var newPrice = Math.floor((((item.bedrooms * item.bathrooms * (item.sqft_living/item.sqft_lot)*item.floors) + item.waterfront + item.view) * item.condition *(item.sqft_above + item.sqft_basement)-10 * (2022 - Math.max(item.yr_built, item.yr_renovated)))*100);
 
             item.price = newPrice;
         }
