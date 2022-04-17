@@ -23,7 +23,14 @@ API - Generate Token <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/budgetHomes    <br>
     METHOD : POST<br>
     HEADERS : {Authorization: Bearer `token`}<br>
-    BODY : {minPrice: `price`, maxPrice:`price`, pageNumber:`number`}<br>
+    BODY : {minPrice: `price`, maxPrice:`price`, pageNumber:`number`}   <br>
+    
+    Example Body :      
+                        {
+                            "minPrice":2000,
+                            "maxPrice":500000,
+                            "pageNumber":1
+                         }
 
 <b>API - Sqft Homes</b>    <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/sqftHomes  <br>
@@ -31,13 +38,31 @@ API - Generate Token <br>
     HEADERS : {Authorization: Bearer `token`}       <br>
     BODY : {minSqft: `sqft_living`, pageNumber:`number`}        <br>
     
+    Example Body :      
+                        {
+                            "minSqft":2000,
+                            "pageNumber":1
+                         }
+                   
 <b>API - Age Homes</b>     <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/ageHomes   <br>
     METHOD : POST<br>
     HEADERS : {Authorization: Bearer `token`}<br>
     BODY : {year: `year`, pageNumber:`number`}<br>
-<br>
+    
+    Example Body : 
+                       {
+                            "year":2020,
+                            "pageNumber":1
+                        }
+
 <b>API - Standard Price Predictor</b>      <br>
     URL : https://home-lane-challenge.herokuapp.com/data-service/standardPrices     <br>
     METHOD : POST<br>
-    HEADERS : {Authorization: Bearer `token`, pageNumber: `number`}<br>
+    HEADERS : {Authorization: Bearer `token`}   <br>
+    BODY : { pageNumber: `number`}
+        
+    Example Body : 
+                       {
+                            "pageNumber":1
+                        }
